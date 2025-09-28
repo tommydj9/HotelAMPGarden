@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel AMP Garden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Hotel AMP Garden</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#camere">Camere</a></li>
+                    <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#prenota">Prenota</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>Benvenuti all'Hotel AMP Garden</h2>
+            <p>Vacanze indimenticabili a pochi passi dal mare</p>
+            <a href="#prenota" class="btn">Prenota ora</a>
+            <a href="#prenota" class="btn secondary">Richiedi un preventivo</a>
+        </div>
+    </section>
+
+    <!-- Sezione Camere -->
+    <section id="camere" class="section">
+        <div class="container">
+            <h2>Le nostre Camere</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x250" alt="Camera Standard">
+                    <h3>Camera Standard</h3>
+                    <p>Fino a 2 persone, bagno privato, aria condizionata.</p>
+                    <p>Prezzo base: 80€/notte</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x250" alt="Camera Superior">
+                    <h3>Camera Superior</h3>
+                    <p>Fino a 3 persone, vista mare, balcone, bagno privato.</p>
+                    <p>Prezzo base: 120€/notte</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x250" alt="Suite">
+                    <h3>Suite</h3>
+                    <p>Fino a 4 persone, soggiorno separato, vista mare, servizi extra.</p>
+                    <p>Prezzo base: 180€/notte</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Servizi -->
+    <section id="servizi" class="section bg-light">
+        <div class="container">
+            <h2>Servizi</h2>
+            <ul class="servizi-list">
+                <li>Piscina</li>
+                <li>Ristorante e bar</li>
+                <li>Parcheggio privato</li>
+                <li>Animazione per bambini</li>
+                <li>Wi-Fi gratuito</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 1">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 2">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 3">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 4">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 5">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modulo Prenotazione -->
+    <section id="prenota" class="section bg-light">
+        <div class="container">
+            <h2>Prenota / Richiedi un preventivo</h2>
+            <form id="prenotazioneForm">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cognome">Cognome</label>
+                    <input type="text" id="cognome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" id="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="arrivo">Data Arrivo</label>
+                    <input type="date" id="arrivo" required>
+                </div>
+                <div class="form-group">
+                    <label for="partenza">Data Partenza</label>
+                    <input type="date" id="partenza" required>
+                </div>
+                <div class="form-group">
+                    <label for="adulti">Numero Adulti</label>
+                    <input type="number" id="adulti" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="bambini">Numero Bambini</label>
+                    <input type="number" id="bambini" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="note">Note / Richieste particolari</label>
+                    <textarea id="note"></textarea>
+                </div>
+                <button type="submit" class="btn">Invia richiesta</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contatti / Footer -->
+    <footer id="contatti">
+        <div class="container">
+            <p>Hotel AMP Garden - Via Mare 123, Italia</p>
+            <p>Email: info@hotelampgarden.it | Telefono: +39 123 456789</p>
+            <p>&copy; 2025 Hotel AMP Garden</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
