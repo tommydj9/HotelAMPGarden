@@ -798,6 +798,11 @@ body {
 
 /* SLIDER PRINCIPALE */
 @media (max-width: 768px) {
+    .gallery-slide img {
+        max-height: 400px;
+        /* più alto per valorizzare le immagini */
+        border-radius: var(--radius);
+    }
 
     .gallery-prev,
     .gallery-next {

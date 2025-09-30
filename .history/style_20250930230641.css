@@ -792,45 +792,14 @@ body {
     }
 }
 
-/* ===========================
-   GALLERY MOBILE OPTIMIZATION
-=========================== */
-
-/* SLIDER PRINCIPALE */
 @media (max-width: 768px) {
-
-    .gallery-prev,
-    .gallery-next {
-        padding: 14px 20px;
-        /* pulsanti più grandi */
-        font-size: 1.8rem;
+    .gallery-slide img {
+        max-height: 300px;
     }
 
-    /* MINIATURE THUMBNAILS */
-    .gallery-thumbnails {
-        gap: 16px;
-        /* più spazio tra le thumbnail */
-        justify-content: flex-start;
-        /* scrollabile orizzontale se vuoi */
-        overflow-x: auto;
-        padding-bottom: 10px;
-    }
-
-    .gallery-slide img,
     .gallery-thumbnails img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* riempie la box senza deformare */
-        border-radius: var(--radius);
-        /* mantiene angoli tondeggianti */
-        display: block;
-    }
-
-    .gallery-thumbnails img.active {
-        transform: scale(1.2);
-        /* evidenza maggiore */
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        width: 50px;
+        height: 50px;
     }
 }
 

@@ -82,6 +82,7 @@ body {
     transition: all 0.4s ease;
 }
 
+/* toggle animation */
 .nav-toggle.open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -254,7 +255,7 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    transition: transform 0.6s ease, box-shadow 0.6s ease, opacity 1s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .room-card:hover {
@@ -334,304 +335,119 @@ body {
 }
 
 /* ===========================
-   GALLERY PREMIUM SLIDER
+   GALLERY
 =========================== */
-.gallery-container {
-    position: relative;
-    margin-top: 40px;
-}
-
-/* SLIDER PRINCIPALE */
-.gallery-slider {
-    overflow: hidden;
-    border-radius: var(--radius);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.gallery-track {
-    display: flex;
-    transition: transform 0.8s ease-in-out;
-}
-
-.gallery-slide {
-    flex: 0 0 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    padding: 15px;
-}
-
-.gallery-slide img {
-    width: 100%;
-    height: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: var(--radius);
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-}
-
-.gallery-slide img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* PULSANTI SLIDER */
-.gallery-prev,
-.gallery-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--primary);
-    color: var(--text-light);
-    border: none;
-    padding: 12px 18px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.5rem;
-    z-index: 100;
-    transition: background 0.3s ease;
-}
-
-.gallery-prev:hover,
-.gallery-next:hover {
-    background: var(--accent);
-}
-
-.gallery-prev {
-    left: 10px;
-}
-
-.gallery-next {
-    right: 10px;
-}
-
-/* MINIATURE THUMBNAILS */
-.gallery-thumbnails {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.gallery-thumbnails img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 12px;
-    cursor: pointer;
-    border: 3px solid transparent;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.gallery-thumbnails img.active {
-    border-color: var(--primary);
-    transform: scale(1.1);
-}
-
-
-/* LIGHTBOX */
-.lightbox-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
-}
-
-.lightbox-overlay.active {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.lightbox-overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: var(--radius);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
-}
-
-
-/* ===========================
-   FORM PRENOTAZIONE
-=========================== */
-#prenota {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #F0F9FF, #E0F7FA);
-}
-
-#prenota h2 {
-    text-align: center;
-    font-size: 2.4rem;
-    margin-bottom: 40px;
-    color: var(--primary);
-    font-weight: 800;
-}
-
-.booking-form {
+.gallery-grid {
     display: grid;
-    gap: 25px;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 50px 30px;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: var(--radius);
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.booking-form:hover {
-    transform: translateY(-2px);
+.gallery-grid img:hover {
+    transform: scale(1.05);
 }
 
-.booking-form .form-grid {
+/* ===========================
+   FORM
+=========================== */
+/* ===========================
+   FORM MIGLIORATO
+=========================== */
+.booking-form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    background: #fff;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease forwards;
 }
 
+/* Campi input */
 .booking-form input,
 .booking-form select,
 .booking-form textarea {
-    width: 100%;
-    padding: 16px 18px;
-    border: 2px solid #ddd;
-    border-radius: 14px;
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    border: 2px solid #e0e0e0;
     font-size: 1rem;
-    background: #f9f9f9;
     transition: all 0.3s ease;
+    background: #fafafa;
 }
 
+/* Focus sugli input */
 .booking-form input:focus,
 .booking-form select:focus,
 .booking-form textarea:focus {
-    border-color: var(--secondary);
+    border-color: var(--primary);
     background: #fff;
-    box-shadow: 0 0 0 5px rgba(79, 193, 255, 0.2);
+    box-shadow: 0 0 0 4px rgba(255, 111, 97, 0.15);
     outline: none;
 }
 
+/* Placeholder più chiari */
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Textarea più spaziosa */
 .booking-form textarea {
-    grid-column: span 2;
-    min-height: 140px;
+    grid-column: 1 / -1;
+    /* occupa tutta la riga */
+    min-height: 120px;
     resize: vertical;
 }
 
-.booking-form button {
-    grid-column: span 2;
-    padding: 18px;
-    font-size: 1.25rem;
+/* Bottone di invio */
+.booking-form button.big {
+    grid-column: 1 / -1;
+    /* occupa tutta la riga */
+    padding: 16px;
+    font-size: 1.2rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: #fff;
     border: none;
-    border-radius: 14px;
+    border-radius: var(--radius);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.booking-form button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0, 123, 255, 0.3);
+.booking-form button.big:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
 }
 
-/* ===========================
-   MESSAGGIO SUCCESSO
-=========================== */
-.booking-success {
-    max-width: 700px;
-    margin: 30px auto;
-    padding: 40px 25px;
-    background: #ffffff;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    animation: fadeInScale 0.8s ease forwards;
-    position: relative;
-    top: 20px;
-
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 1.2s ease-out;
+/* Messaggi di successo */
+.success-msg {
+    background: #e6ffed;
+    border-left: 5px solid #4CAF50;
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    color: #2e7d32;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.booking-success .checkmark {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    background: #38a169;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: popIn 0.6s ease forwards;
-}
-
-.booking-success .checkmark span {
-    color: #fff;
-    font-size: 3.5rem;
-    font-weight: bold;
-}
-
-.booking-success h3 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #2c7a2c;
-    font-weight: 800;
-}
-
-.booking-success p {
-    font-size: 1.15rem;
-    color: #444;
-    line-height: 1.6;
-}
-
-/* ===========================
-   ANIMAZIONI
-=========================== */
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
+/* Responsive ottimizzato */
+@media (max-width: 600px) {
+    .booking-form {
+        grid-template-columns: 1fr;
+        padding: 20px;
     }
 }
 
-@keyframes popIn {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* ===========================
    FOOTER
@@ -652,25 +468,45 @@ body {
     text-decoration: underline;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: 0;
-    pointer-events: none;
-    transition: background 1s ease;
-}
+/* ===========================
+   ANIMAZIONI
+=========================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-/* Hero-inner sopra overlay */
-.hero-inner {
-    position: relative;
-    z-index: 1;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ===========================
-   RESPONSIVE GENERALE
+   RESPONSIVE
 =========================== */
+
+/* Responsive camere */
+@media (max-width: 1200px) {
+    .rooms-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .rooms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .rooms-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 @media (max-width: 1200px) {
 
     .rooms-grid,
@@ -692,16 +528,6 @@ body {
 
     .hero-inner p {
         font-size: 1rem;
-    }
-
-    .booking-form .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .booking-form textarea,
-    .booking-form button,
-    .booking-success {
-        grid-column: span 1;
     }
 }
 
@@ -725,7 +551,6 @@ body {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease;
-        z-index: 150;
     }
 
     .main-nav.active {
@@ -736,117 +561,15 @@ body {
     .main-nav ul {
         flex-direction: column;
         gap: 15px;
-        text-align: center;
     }
+}
 
-    #prenota {
-        padding: 60px 20px;
-    }
-
-    .booking-form {
-        padding: 35px 20px;
-    }
-
+@media (max-width: 480px) {
     .hero-inner h1 {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 
     .hero-inner p {
         font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 480px) {
-    #prenota h2 {
-        font-size: 2rem;
-    }
-
-    .booking-success h3 {
-        font-size: 1.6rem;
-    }
-
-    .hero-inner h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero-inner p {
-        font-size: 0.9rem;
-    }
-}
-
-/* ===========================
-   RESPONSIVE BREAKPOINTS
-=========================== */
-
-/* Tablet */
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .gallery-slide img {
-        max-height: 400px;
-    }
-
-    .gallery-thumbnails img {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-/* ===========================
-   GALLERY MOBILE OPTIMIZATION
-=========================== */
-
-/* SLIDER PRINCIPALE */
-@media (max-width: 768px) {
-
-    .gallery-prev,
-    .gallery-next {
-        padding: 14px 20px;
-        /* pulsanti più grandi */
-        font-size: 1.8rem;
-    }
-
-    /* MINIATURE THUMBNAILS */
-    .gallery-thumbnails {
-        gap: 16px;
-        /* più spazio tra le thumbnail */
-        justify-content: flex-start;
-        /* scrollabile orizzontale se vuoi */
-        overflow-x: auto;
-        padding-bottom: 10px;
-    }
-
-    .gallery-slide img,
-    .gallery-thumbnails img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* riempie la box senza deformare */
-        border-radius: var(--radius);
-        /* mantiene angoli tondeggianti */
-        display: block;
-    }
-
-    .gallery-thumbnails img.active {
-        transform: scale(1.2);
-        /* evidenza maggiore */
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    }
-}
-
-
-/* Piccoli schermi */
-@media (max-width: 480px) {
-    .gallery-slider {
-        height: 220px;
-    }
-
-    .gallery-thumbnails {
-        gap: 6px;
-    }
-
-    .gallery-thumbnails img {
-        width: 50px;
-        height: 30px;
     }
 }

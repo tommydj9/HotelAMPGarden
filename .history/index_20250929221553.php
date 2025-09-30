@@ -7,9 +7,8 @@
   <meta name="description" content="Hotel AMP Garden: la tua oasi di relax sul mare. Prenota ora e vivi un'esperienza indimenticabile!">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=<?= time(); ?>">
-
-  <script defer src="script.js?v=<?= time(); ?>"></script>
+  <link rel="stylesheet" href="style.css?v=3">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -70,7 +69,7 @@
       $camere = [
         [
           "nome" => "Camera Singola",
-          "img" => "https://cf.bstatic.com/xdata/images/hotel/max1024x768/678932947.jpg?k=469e46db3f4785da51e8d4dc6c3442c13e1324dba73296a7bb505a20feb76945&o=",
+          "img" => "https://cf.bstatic.com/xdata/images/hotel/max1024x768/678932947.jpg",
           "prezzo" => "50€",
           "descr" => [
             ["icon" => "❄️", "text" => "Aria condizionata"],
@@ -80,7 +79,7 @@
         ],
         [
           "nome" => "Camera Matrimoniale",
-          "img" => "https://cf.bstatic.com/xdata/images/hotel/max1024x768/679290605.jpg?k=d2401670462862af9e5c884044140347a0c47a887532873a7fda5eb8521ece13&o=",
+          "img" => "https://cf.bstatic.com/xdata/images/hotel/max1024x768/679290605.jpg",
           "prezzo" => "60€",
           "descr" => [
             ["icon" => "🛏️", "text" => "Letto matrimoniale"],
@@ -92,7 +91,7 @@
         ],
         [
           "nome" => "Camera Tripla",
-          "img" => "https://cf.bstatic.com/xdata/images/hotel/max1024x768/676281074.jpg?k=292954e57ad148a0de944cada0ac5ba4fa5bf49641e46ba72f66823c0d4e9ab1&o=",
+          "img" => "https://cf.bstatic.com/xdata/images/hotel/max1024x768/676281074.jpg",
           "prezzo" => "71€",
           "descr" => [
             ["icon" => "🛏️", "text" => "1 letto matrimoniale + 1 singolo"],
@@ -105,7 +104,7 @@
         ],
         [
           "nome" => "Camera Quadrupla",
-          "img" => "https://cf.bstatic.com/xdata/images/hotel/max1024x768/676279779.jpg?k=c0715e3f8a1631812ab61378145d615b755094ad4f0f026c53c444e61b9b5b7f&o=",
+          "img" => "https://cf.bstatic.com/xdata/images/hotel/max1024x768/678932947.jpg?k=469e46db3f4785da51e8d4dc6c3442c13e1324dba73296a7bb505a20feb76945&o=",
           "prezzo" => "75€",
           "descr" => [
             ["icon" => "🛏️", "text" => "2 letti singoli + 1 matrimoniale"],
@@ -157,53 +156,25 @@
     </div>
   </section>
 
-<section id="gallery" class="section colorful">
-  <div class="wrap">
-    <h2 class="section-title">Gallery</h2>
-
-    <div class="gallery-container">
-      <!-- SLIDER PRINCIPALE -->
-      <div class="gallery-slider">
-        <div class="gallery-track">
-          <div class="gallery-slide"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/676122775.jpg?k=2c24471d66d96714286d778f98751f9a4a0b3f482f14600e304e13d5521c585e&o=" alt="Foto 1"></div>
-          <div class="gallery-slide"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/678932257.jpg?k=665cd91b0203cd40edb1299a31f827e24cd9ecb36252ada9eb2a72cbbbc87a01&o=" alt="Foto 2"></div>
-          <div class="gallery-slide"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/679016861.jpg?k=47bb73b9bf38bef619805ffd60f729afb7076b7f5966ba029b242ad849970438&o=" alt="Foto 3"></div>
-          <div class="gallery-slide"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/678932947.jpg?k=469e46db3f4785da51e8d4dc6c3442c13e1324dba73296a7bb505a20feb76945&o=" alt="Foto 4"></div>
-          <div class="gallery-slide"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/678931508.jpg?k=47c33b2b5badfcfdcce352472454b7dcb0389ad9baf0b329f1b168afea175ec9&o=" alt="Foto 5"></div>
-          <div class="gallery-slide"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/676112939.jpg?k=8cb67f269f85bd8108fe00c0a3737446116c901a3bd35a59abdfb3460b7a2ecf&o=" alt="Foto 6"></div>
-        </div>
-        <button class="gallery-prev" aria-label="Slide precedente">&#10094;</button>
-        <button class="gallery-next" aria-label="Slide successivo">&#10095;</button>
-      </div>
-
-      <!-- MINI THUMBNAILS -->
-      <div class="gallery-thumbnails">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/676122775.jpg?k=2c24471d66d96714286d778f98751f9a4a0b3f482f14600e304e13d5521c585e&o=" data-index="0">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/678932257.jpg?k=665cd91b0203cd40edb1299a31f827e24cd9ecb36252ada9eb2a72cbbbc87a01&o=" data-index="1">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/679016861.jpg?k=47bb73b9bf38bef619805ffd60f729afb7076b7f5966ba029b242ad849970438&o=" data-index="2">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/678932947.jpg?k=469e46db3f4785da51e8d4dc6c3442c13e1324dba73296a7bb505a20feb76945&o=" data-index="3">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/678931508.jpg?k=47c33b2b5badfcfdcce352472454b7dcb0389ad9baf0b329f1b168afea175ec9&o=" data-index="4">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/676112939.jpg?k=8cb67f269f85bd8108fe00c0a3737446116c901a3bd35a59abdfb3460b7a2ecf&o=" data-index="5">
+  <!-- GALLERY -->
+  <section id="gallery" class="section colorful">
+    <div class="wrap">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-grid">
+        <a href="images/gallery1.jpg"><img src="images/gallery1_thumb.jpg" alt="Foto 1"></a>
+        <a href="images/gallery2.jpg"><img src="images/gallery2_thumb.jpg" alt="Foto 2"></a>
+        <a href="images/gallery3.jpg"><img src="images/gallery3_thumb.jpg" alt="Foto 3"></a>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- FORM PRENOTAZIONE -->
   <section id="prenota" class="section">
     <div class="wrap narrow">
       <h2>Prenota Ora</h2>
-     <?php if(isset($_GET['success']) && $_GET['success']==1): ?>
-      <div class="booking-success">
-        <div class="checkmark">
-          <span>✓</span>
-        </div>
-        <h3>Prenotazione inviata con successo!</h3>
-        <p>Ti contatteremo al più presto per confermare i dettagli del tuo soggiorno.</p>
-      </div>
-    <?php endif; ?>
-
+      <?php if(isset($_GET['success']) && $_GET['success']==1): ?>
+        <p class="success-msg">✅ Richiesta inviata! Ti contatteremo al più presto.</p>
+      <?php endif; ?>
       <form action="send_mail.php" method="POST" class="booking-form">
         <div class="form-grid">
           <input type="text" name="nome" placeholder="Nome *" required>
